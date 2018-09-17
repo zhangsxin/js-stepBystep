@@ -31,17 +31,15 @@
       display:inline-block;
       *zoom:1;
       position:absolute;
-      width:30px;
-      height:30px;
+      width: 32px;
+      height: 32px;
       line-height:30px;
       color:#fff;
       border-radius:50%;
-      border:2px solid rgba(224,224,224,1);
-      font-family:tahoma;
+      //font-family:tahoma;
       font-weight:bold;
       font-size:16px;
       background-color:#b9b9b9;
-      box-shadow:1px 1px 2px rgba(0,0,0,.2) inset;
       cursor:pointer;
     }
     .progress-text{
@@ -51,7 +49,7 @@
       font-size:12px;
       padding: 0 5px;
       top: 8px;
-      left: 33px;
+      left: 32px;
       color:rgba(51,51,51,1);
       background-color: #ffffff;
     }
@@ -65,30 +63,66 @@
       width: 74px;
     }
   }
+  .progress-one .progress-content{
+    .progress-number{
+      background: url("images/1_chosen.png");
+    }
+  }
+  .progress-two .progress-content{
+    .progress-number{
+      background-color: #ffffff;
+      background-image: url("images/2.png");
+    }
+  }
+  .progress-three .progress-content{
+    .progress-number{
+      background-color: #ffffff;
+      background-image: url("images/3.png");
+    }
+  }
+  .progress-four .progress-content{
+    .progress-number{
+      background-color: #ffffff;
+      background-image: url("images/4.png");
+    }
+  }
+  .progress-two.progressing .progress-content .progress-number{
+    background-image: url("images/2_chosen.png");
+  }
+  .progress-three.progressing .progress-content .progress-number{
+    background-image: url("images/3_chosen.png");
+  }
+  .progress-four.progressing .progress-content .progress-number{
+    background-image: url("images/4_chosen.png");
+  }
   .progressing{
     .progress-line{
       background-color: rgb(185, 185, 185);
     }
     .progress-content{
       .progress-number{
-        background-color: rgb(51, 204, 51);
+        background-color: RGBA(24, 144, 255, 1);
       }
       .progress-text{
-        color: rgb(51, 204, 51);
+        color: RGBA(24, 144, 255, 1);
       }
     }
 
   }
   .progressed{
     .progress-line{
-      background-color: rgb(51, 204, 51);
+      background-color: RGBA(24, 144, 255, 1);
     }
     .progress-content{
       .progress-number{
-        background-color: rgb(133, 224, 133);
+        //background-color: rgb(133, 224, 133);
+        background-color: #ffffff;
+        background-image: url("images/tick.png");
+        background-repeat:  no-repeat;
       }
       .progress-text{
-        color: rgb(133, 224, 133);
+        color: RGBA(24, 144, 255, 1);
+
       }
     }
   }
@@ -101,4 +135,5 @@
     display: block;
   }
 }
+
 

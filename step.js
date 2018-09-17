@@ -98,18 +98,26 @@ $(function () {
 
     $('.progress-number').click(function () {
         var index = $(this).parents('.progress').index();
-        $(this).parents('.progress').addClass('progressing').prevAll().removeClass('progressing').addClass('progressed')
+        $(this).parents('.progress').addClass('progressing').removeClass('progressed').prevAll().removeClass('progressing').addClass('progressed')
+        $(this).parents('.progress').nextAll().removeClass('progressing').removeClass('progressed')
         $('.step_content').children('.step').eq(index).addClass('step_active').siblings().removeClass('step_active')
-        $(this).parents('.progress').addClass('progressing').removeClass('progressed').nextAll().removeClass('progressing').removeClass('progressed')
+
+        if($('.progress').hasClass('progressed')){
+            // $('.progressed .progress-number').empty()
+        }
 
 
+
+        })
+
+
+/* 异步
+    var Progress = new Promise(function (resolve, reject) {
+        resolve('成功');
     })
+    Progress.then(function () {
+        $('.progress-one').addClass('progressing')
+    }).then($('.progress-two').addClass('progressing'))
 
-    // var Progress = new Promise(function (resolve, reject) {
-    //     resolve('成功');
-    // })
-    // Progress.then(function () {
-    //     $('.progress-one').addClass('progressing')
-    // }).then($('.progress-two').addClass('progressing'))
-
+    */
 })
